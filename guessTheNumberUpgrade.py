@@ -1,4 +1,4 @@
-# replace the contents of this comment with your name
+Christopher Pelaez
 import random
 
 # -------------------------------------------------------------------
@@ -7,6 +7,8 @@ import random
 #   'topLimit' which is the top limit for the random number generator
 # the function returns the random number generated to its caller
 def generateNumber( topLimit ):
+    secreatNumber = random.randint (1, toplimit)
+    return secretNumber
     
     # TO DO: ####################################################
     # Write code in this function that calculates and           #
@@ -46,6 +48,15 @@ def askUserToGuess( times, secretNumber ):
 def evaluateAnswer( userGuess, userSecretNumber ):
     
     # TO DO: ####################################################
+    if user guess< user SecretNumber:
+        print ('Your guess is too low')
+        return False
+    elif userGuess > userSecretNumber:
+        print ('Your guess is too high')
+        return False
+    elif userGuess == userSecretNumber:
+        return True
+
     # Write code in this function that compares userGuess and   #
     # userSecretNumber. The code should:                        #
     # 1. If the user guess is smaller than the secret number,   #
@@ -68,7 +79,15 @@ def evaluateAnswer( userGuess, userSecretNumber ):
 def playGame( showAnswer ):
     
     # TO DO: ####################################################
-    # Write code in this function that                          #
+    # Write code in this function that 
+    print ('Welcome to the number guessing game!')
+    print ('choose the upper limit of the random number generator!')
+    topLimit = int(input())
+    print ('Please enter the number of guesses you would like to have')
+    totalGuesses = int(input())
+    theNumber = generateNumber (topLimit)
+    print('guess a number between 1 and the '+str(topLimit))
+    print ('You now have ' + str(totalGuesses) + ' times to guess a number between 1 and ' + str(topLimit))
     # 1. Greets the user                                        #
     # 2. Asks the user to choose the upper limit of the random  #
     #    number generator. Store the user's response in a       #
